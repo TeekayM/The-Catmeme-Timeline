@@ -131,7 +131,7 @@ def openWindow():
     app.exec()
 
 twindow = threading.Thread(target=openWindow)
-twindow.setDaemon(True)
+twindow.daemon = True
 twindow.start()
 evt = threading.Event()
 
@@ -305,7 +305,7 @@ def pause():
     Buttons[1].setText("Continue")
     gameinfo.gamePaused = True
     t = threading.Thread(target=waitForValueChange)
-    t.setDaemon(True)
+    t.daemon = True
     t.start()
     while t.is_alive():
         QtCore.QCoreApplication.processEvents()
