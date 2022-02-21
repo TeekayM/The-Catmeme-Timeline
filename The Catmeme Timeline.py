@@ -11,7 +11,6 @@ import threading
 from typing import get_args
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 app = QtWidgets.QApplication(sys.argv)
 
 class GameInfo():
